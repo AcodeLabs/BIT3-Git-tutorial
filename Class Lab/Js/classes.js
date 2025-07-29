@@ -75,5 +75,25 @@ class SUV extends Car {
     }
 }
 
-const car2 = new SUV("Chevloret", "Surbaban", "$80,000", "Armed", "1995", 12);
-console.log(car2.fname);
+// const car2 = new SUV("Chevloret", "Surbaban", "$80,000", "Armed", "1995", 12);
+// console.log(car2.fname);
+
+
+// JSON
+
+const user = {
+    "firstname": "Scotts",
+    "lastname": "Maphumma",
+    "address": ["Cape Town", "Georgia", "Durban"],
+    "qualifications": ["GSCE", "DJ", "Music Engine"],
+    "awards": "SA Got Talent",
+    "age": 29,
+    "married": false,
+    "hobbies": ["Staging"]
+}
+
+const vall = JSON.stringify(user);
+console.log(vall);
+
+console.log(user);
+
