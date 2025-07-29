@@ -22,12 +22,14 @@ class Car {
     #lname;
     #price;
     #supplier;
+
     constructor(firstname, lastname, price, supplier) {
         this.#fname = firstname;
         this.#lname = lastname;
         this.#price = price;
         this.#supplier = supplier;
     }
+
 
     get price() {
         return this.#price;
@@ -40,8 +42,16 @@ class Car {
     get supplier() {
         return this.#supplier;
     }
+
+
+    getOwner(owner) {
+        return `${owner} Owns a ${this.fullname}`;
+    }
 }
 
 
 const car1 = new Car("Lykan", "Hypersport", "$3.4M", "W Motors");
 console.log(car1.supplier);
+let owner = car1.getOwner("EAU National Security");
+console.log(owner);
+
