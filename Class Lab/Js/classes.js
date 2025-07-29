@@ -30,13 +30,16 @@ class Car {
         this.#supplier = supplier;
     }
 
+    get aboutCar() {
+        return "W Motors - |EUA Produced only 7 Lykans";
+    }
 
     get price() {
         return this.#price;
     }
 
     get fullname() {
-        return `${this.#fname}  ${this.#lname}`;
+        return `${this.#fname} ${this.#lname}`;
     }
 
     get supplier() {
@@ -49,9 +52,28 @@ class Car {
     }
 }
 
+// CLASS INSTANTIATION 
+// const car1 = new Car("Lykan", "Hypersport", "$3.4M", "W Motors");
+// console.log(car1.supplier);
+// let owner = car1.getOwner("EAU National Security");
+// console.log(owner);
 
-const car1 = new Car("Lykan", "Hypersport", "$3.4M", "W Motors");
-console.log(car1.supplier);
-let owner = car1.getOwner("EAU National Security");
-console.log(owner);
 
+
+// OOP INHERITANCE
+
+class SUV extends Car {
+    #model;
+    #year;
+    #quantity;
+
+    constructor(firstname, lastname, price, model, year, quantity) {
+        super(firstname, lastname, price);
+        this.#model = model;
+        this.#year = year;
+        this.#quantity = quantity;
+    }
+}
+
+const car2 = new SUV("Chevloret", "Surbaban", "$80,000", "Armed", "1995", 12);
+console.log(car2.fname);
