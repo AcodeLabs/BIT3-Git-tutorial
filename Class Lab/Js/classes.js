@@ -75,6 +75,8 @@ class SUV extends Car {
     }
 }
 
+let endpoint = "jsonplaceholder.typicode.com / todos";
+
 // const car2 = new SUV("Chevloret", "Surbaban", "$80,000", "Armed", "1995", 12);
 // console.log(car2.fname);
 
@@ -97,3 +99,13 @@ console.log(vall);
 
 console.log(user);
 
+async function getDat() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos")
+
+    let data = await response.json()
+
+    console.log(data);
+
+}
+
+getDat();
